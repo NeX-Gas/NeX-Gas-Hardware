@@ -50,13 +50,9 @@ Di-slice dengan Orca untuk A1 mini, profil **0.20 Standard / PETG Basic**
 
 | Part | Filament | Waktu | Support |
 |---|---|---|---|
-| Tray | 74.14 g | 2h 35m | 0 (support off) — 1.07 g kalau support dipaksa |
+| Tray | 73.97 g | 2h 32m | **0.00 g** (sliced dengan support ON) |
 | Lid | 26.71 g | 1h 08m | 0.01 g |
-| **Total** | **≈ 100.9 g** | **≈ 3h 43m** | ≈ 0 |
-
-Angka 1.07 g itu muncul kalau support dinyalakan: Orca menaruh pilar kecil di
-bawah **garis ujung** 4 pilar baut, bukan karena ada bidang datar yang
-menggantung. Ujungnya sudah 45°, jadi dengan support dimatikan hasilnya bersih.
+| **Total** | **≈ 100.7 g** | **≈ 3h 40m** | ≈ 0 |
 
 Untuk lebih hemat: 2 perimeter + 10–15% infill.
 
@@ -87,11 +83,10 @@ lubang horizontal: sisi 45° tidak perlu support, beda dengan lengkung 90°.
 
 ## Kenapa tidak perlu support
 
-1. **Pilar baut 14 mm dengan ujung 45°.** Sebelumnya 48 mm tembus dinding
-   belakang (0.00 g support tapi boros 6.6 cm³); versi pendek ini memotong
-   volume itu dan ujungnya dibuat wedge 45° supaya tidak ada bidang datar
-   menggantung. Sisa 1.07 g di slicer hanya di bawah garis ujung — tidak
-   diperlukan saat mencetak.
+1. **Pilar baut 14 mm dengan wedge 45° yang rendah di sisi dinding.** Ujung
+   rendahnya menempel ke dinding (Y=9 di X=68) dan naik keluar ke Y=16 di sisi
+   dalam — jadi pilar itu "tumbuh dari dinding", bukan menjorok bebas. Ini yang
+   membuat slicer tidak menambah support sama sekali (0.00 g).
 2. **Lubang gland & ventilasi teardrop 45°** — puncak menghadap arah cetak.
 3. **Lubang USB diberi atap 45°**, bukan ambang datar.
 4. Tidak ada pad/pocket modul yang membuat bidang menggantung.
