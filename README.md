@@ -46,13 +46,17 @@ atap interior 136 × 44 mm jadi bidang horizontal dan support memenuhi kotak.
 ## Verifikasi cetak
 
 Di-slice dengan Orca untuk A1 mini, profil **0.20 Standard / PETG Basic**
-(3 wall, 15% infill), **support diaktifkan** dengan ambang 30°:
+(3 wall, 15% infill):
 
 | Part | Filament | Waktu | Support |
 |---|---|---|---|
-| Tray | 75.84 g | 2h 56m | **0.00 g** (0 tanda support) |
-| Lid | 26.71 g | 1h 08m | 0.01 g (2 tanda kecil di bawah huruf) |
-| **Total** | **≈ 102.6 g** | **≈ 4h 04m** | ≈ 0 |
+| Tray | 73.60 g | 2h 22m | 0 (support off) — 1.07 g kalau support dipaksa |
+| Lid | 26.71 g | 1h 08m | 0.01 g |
+| **Total** | **≈ 100.3 g** | **≈ 3h 30m** | ≈ 0 |
+
+Angka 1.07 g itu muncul kalau support dinyalakan: Orca menaruh pilar kecil di
+bawah **garis ujung** 4 pilar baut, bukan karena ada bidang datar yang
+menggantung. Ujungnya sudah 45°, jadi dengan support dimatikan hasilnya bersih.
 
 Untuk lebih hemat: 2 perimeter + 10–15% infill.
 
@@ -75,20 +79,23 @@ lubang horizontal: sisi 45° tidak perlu support, beda dengan lengkung 90°.
 
 | Item | Jumlah |
 |---|---|
-| M3 × 12 self-tapping (plat → tray) | 4 |
+| M3 × 10 self-tapping (plat → tray) | 4 |
 | M2.5 × 10 self-tapping (LCD → plat) | 4 |
 | Sekrup M4 + washer (tab ke dinding) | 2 |
 | Gland M16 / M20 + mur | 1 + 1 |
 | Kaki karet Ø10 | 4 |
 
-## Yang membuatnya 0 support
+## Kenapa tidak perlu support
 
-1. **Boss sudut sekarang tembus** dari dinding belakang sampai rim — jadi kolom
-   vertikal. Versi sebelumnya berhenti 12 mm dan ujungnya berupa bidang
-   horizontal 7 × 7 mm di ketinggian 36 mm; itu yang memicu support.
+1. **Pilar baut 14 mm dengan ujung 45°.** Sebelumnya 48 mm tembus dinding
+   belakang (0.00 g support tapi boros 6.6 cm³); versi pendek ini memotong
+   volume itu dan ujungnya dibuat wedge 45° supaya tidak ada bidang datar
+   menggantung. Sisa 1.07 g di slicer hanya di bawah garis ujung — tidak
+   diperlukan saat mencetak.
 2. **Lubang gland & ventilasi teardrop 45°** — puncak menghadap arah cetak.
 3. **Lubang USB diberi atap 45°**, bukan ambang datar.
-4. Tidak ada lagi pad/pocket modul yang membuat bidang menggantung.
+4. Tidak ada pad/pocket modul yang membuat bidang menggantung.
+5. Semua dinding vertikal di pose cetak; tidak ada atap interior.
 
 ## Catatan / yang perlu dicek
 
@@ -98,10 +105,12 @@ lubang horizontal: sisi 45° tidak perlu support, beda dengan lengkung 90°.
 3. **Deboss "NEX-IOGas"** menyisakan 0.01 g support (2 tanda) karena huruf
    dicetak menghadap bed. Kalau mau benar-benar 0.000 g, bilang — labelnya
    saya hapus atau saya ganti jadi engraving V.
-4. **Plat belum punya spigot/lip** — penempatan mengandalkan 4 baut M3.
-5. **Gantung dinding pakai tab**, bukan keyhole.
-6. **USB** hanya untuk flashing; jarak ujung konektor ke dinding kiri ± 8.6 mm.
-7. **Kabel I2C LCD** ikut plat saat dibuka — pakai konektor 4-pin di sisi ESP32.
+4. **Pilar baut 14 mm** — pilot M3 8 mm, jadi pakai baut **M3 × 10**
+   (2 mm plat + 8 mm pilar). Kalau mau ulir lebih dalam, pilarnya dinaikkan lagi.
+5. **Plat belum punya spigot/lip** — penempatan mengandalkan 4 baut M3.
+6. **Gantung dinding pakai tab**, bukan keyhole.
+7. **USB** hanya untuk flashing; jarak ujung konektor ke dinding kiri ± 8.6 mm.
+8. **Kabel I2C LCD** ikut plat saat dibuka — pakai konektor 4-pin di sisi ESP32.
 
 ## Elektrikal LCD (belum ada di firmware)
 
