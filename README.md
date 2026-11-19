@@ -29,9 +29,9 @@ Kedua bagian muat print bed 180 × 180 × 180:
 
 - **Tray** 140.8 × 98.8 × 48.4 — cetak dengan bukaan menghadap ke atas
   (dinding belakang di bed). Tanpa support.
-- **FrontPlate** 140.8 × 88.8 × 13.5 — cetak dengan muka dalam di bawah
-  (boss LCD menghadap ke atas). Tanpa support. Jendela dan tulisan tercetak
-  mulus di permukaan atas.
+- **FrontPlate** 140.8 × 88.8 × 13.5, sudut R4 sama dengan tray — cetak dengan
+  muka dalam di bawah (boss LCD menghadap ke atas). Tanpa support. Jendela dan
+  tulisan tercetak mulus di permukaan atas.
 
 ## Isi kotak
 
