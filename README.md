@@ -50,9 +50,9 @@ Di-slice dengan Orca untuk A1 mini, profil **0.20 Standard / PETG Basic**
 
 | Part | Filament | Waktu | Support |
 |---|---|---|---|
-| Tray | 73.60 g | 2h 22m | 0 (support off) — 1.07 g kalau support dipaksa |
+| Tray | 73.96 g | 2h 35m | 0 (support off) — 1.07 g kalau support dipaksa |
 | Lid | 26.71 g | 1h 08m | 0.01 g |
-| **Total** | **≈ 100.3 g** | **≈ 3h 30m** | ≈ 0 |
+| **Total** | **≈ 100.7 g** | **≈ 3h 43m** | ≈ 0 |
 
 Angka 1.07 g itu muncul kalau support dinyalakan: Orca menaruh pilar kecil di
 bawah **garis ujung** 4 pilar baut, bukan karena ada bidang datar yang
@@ -68,7 +68,7 @@ Untuk lebih hemat: 2 perimeter + 10–15% infill.
 | Gland daya | M16, **teardrop 45°** | dinding bawah, X = +25 |
 | Gland sensor/solenoid | M20, **teardrop 45°** | dinding bawah, X = +52 |
 | USB | 8 × 10 + atap 45° | dinding kiri, sejajar ujung ESP32 |
-| Ventilasi | 6 × Ø6, **teardrop 45°** | 3 per sisi |
+| Ventilasi | 4 × Ø8, **teardrop 45°** | 2 per sisi |
 | Tab dinding | 2× 30 × 3, Ø4.5 | atas, X = ±45 |
 | Kaki karet | 4 recess Ø10 × 0.8 | bawah |
 
