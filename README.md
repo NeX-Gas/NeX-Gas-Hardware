@@ -50,9 +50,9 @@ Di-slice dengan Orca untuk A1 mini, profil **0.20 Standard / PETG Basic**
 
 | Part | Filament | Waktu | Support |
 |---|---|---|---|
-| Tray | 73.96 g | 2h 35m | 0 (support off) — 1.07 g kalau support dipaksa |
+| Tray | 74.14 g | 2h 35m | 0 (support off) — 1.07 g kalau support dipaksa |
 | Lid | 26.71 g | 1h 08m | 0.01 g |
-| **Total** | **≈ 100.7 g** | **≈ 3h 43m** | ≈ 0 |
+| **Total** | **≈ 100.9 g** | **≈ 3h 43m** | ≈ 0 |
 
 Angka 1.07 g itu muncul kalau support dinyalakan: Orca menaruh pilar kecil di
 bawah **garis ujung** 4 pilar baut, bukan karena ada bidang datar yang
